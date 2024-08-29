@@ -11,3 +11,24 @@ export const fetchTopAlbums = async()=>{
         console.log(e)
     }
 }
+
+export const fetchNewAlbums =async()=>{
+    try{
+        const res = await axios.get(`${backend_URL}/albums/new`)
+        return res.data;
+    }
+    catch(e){
+        console.log(e)
+    }
+
+}
+
+export const fetchSongs=async ()=>{
+    try{
+        const res = await axios.get(`${backend_URL}/songs`);
+            return res.data;
+    }
+    catch(e){
+        console.log(e);
+    }
+}
